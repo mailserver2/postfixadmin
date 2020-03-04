@@ -28,7 +28,7 @@ RUN echo "@community https://nl.alpinelinux.org/alpine/v3.11/community" >> /etc/
  && wget -q https://github.com/postfixadmin/postfixadmin/archive/${PFA_TARBALL} \
  && CHECKSUM=$(sha256sum ${PFA_TARBALL} | awk '{print $1}') \
  && if [ "${CHECKSUM}" != "${SHA256_HASH}" ]; then echo "ERROR: Checksum does not match!" && exit 1; fi \
- && mkdir /postfixadmin && tar xzf ${PFA_TARBALL} -C /postfixadmin && mv /postfixadmin/postfixadmin-$VERSION/* /postfixadmin \
+ && mkdir /postfixadmin && tar xzf ${PFA_TARBALL} -C /postfixadmin && mv /postfixadmin/postfixadmin-postfixadmin-$VERSION/* /postfixadmin \
  && apk del build-dependencies \
  && rm -rf /var/cache/apk/* /tmp/* /root/.gnupg /postfixadmin/postfixadmin-$VERSION*
 
