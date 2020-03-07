@@ -61,7 +61,7 @@ cat > /postfixadmin/config.local.php <<EOF
 
 \$CONF['admin_email'] = 'postfixadmin@${DOMAIN}';
 \$CONF['footer_text'] = 'Return to ${DOMAIN}';
-\$CONF['footer_link'] = 'http://${DOMAIN}';
+\$CONF['footer_link'] = 'https://${DOMAIN}';
 \$CONF['default_aliases'] = array (
   'abuse'      => 'abuse@${DOMAIN}',
   'hostmaster' => 'hostmaster@${DOMAIN}',
