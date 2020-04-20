@@ -1,10 +1,10 @@
-FROM alpine:3.11.3
+FROM alpine:3.11
 
 LABEL description "PostfixAdmin is a web based interface used to manage mailboxes" \
       maintainer="Hardware <contact@meshup.net>"
 
-ARG VERSION=3.2.3
-ARG SHA256_HASH="dae88f8166804997386bdf2454a62afc9bc768f0e4b53f46003d2766cebf31c0"
+ARG VERSION=3.2.4
+ARG SHA256_HASH="f61a64b32052c46f40cba466e5e384de0efab8c343c91569bcc5ebfd3694811e"
 
 RUN echo "@community https://nl.alpinelinux.org/alpine/v3.11/community" >> /etc/apk/repositories \
  && apk -U upgrade \
