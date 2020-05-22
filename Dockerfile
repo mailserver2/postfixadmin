@@ -1,6 +1,6 @@
 FROM alpine:3.11
 
-LABEL description "PostfixAdmin is a web based interface used to manage mailboxes" \
+LABEL description="PostfixAdmin is a web based interface used to manage mailboxes" \
       maintainer="Hardware <contact@meshup.net>"
 
 ARG VERSION=3.2.4
