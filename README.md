@@ -1,4 +1,4 @@
-# hardware/postfixadmin
+# mailserver2/postfixadmin
 
 ![postfixadmin](http://i.imgur.com/UCtvKHR.png "postfixadmin")
 
@@ -17,8 +17,6 @@ PostfixAdmin is a web based interface used to manage mailboxes, virtual domains 
 ### Built-time variables
 
 - **VERSION** : version of postfixadmin
-- **GPG_SHORTID** : short gpg key ID
-- **GPG_FINGERPRINT** : fingerprint of signing key
 - **SHA256_HASH** : SHA256 hash of Postfixadmin archive
 
 ### Ports
@@ -47,7 +45,7 @@ PostfixAdmin is a web based interface used to manage mailboxes, virtual domains 
 | **QUOTA_MULTIPLIER** | Number of bytes required to represent a single quota unit. You can either use '1000000', '1024000' or '1048576' | *optional* | 1024000
 | **FETCHMAIL_EXTRA_OPTIONS** | Allows to pass additional options to fetchmail | *optional* | NO
 
-* If you use this docker image and [hardware/mailserver](https://github.com/hardware/mailserver) with fetchmail support enabled, a dedicated port (10025) is available with less restrictions for delivery. Use `FETCHMAIL_EXTRA_OPTIONS` environment variable for that purpose. Example :
+* If you use this docker image and [mailserver2/mailserver](https://github.com/mailserver2/mailserver) with fetchmail support enabled, a dedicated port (10025) is available with less restrictions for delivery. Use `FETCHMAIL_EXTRA_OPTIONS` environment variable for that purpose. Example :
 
 ```yml
 postfixadmin:
@@ -59,10 +57,10 @@ postfixadmin:
 
 ```yml
 # Full example :
-# https://github.com/hardware/mailserver/blob/master/docker-compose.sample.yml
+# https://github.com/mailserver2/mailserver/blob/master/docker-compose.sample.yml
 
 postfixadmin:
-  image: hardware/postfixadmin
+  image: mailserver2/postfixadmin
   container_name: postfixadmin
   domainname: domain.tld
   hostname: mail
@@ -75,4 +73,4 @@ postfixadmin:
 
 ### How to setup
 
-https://github.com/hardware/mailserver/wiki/Postfixadmin-initial-configuration
+https://github.com/mailserver2/mailserver/wiki/Postfixadmin-initial-configuration
