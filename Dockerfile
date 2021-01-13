@@ -17,6 +17,7 @@ RUN set -eux; \
         php7-imap \
         php7-mbstring \
         php7-mysqli \
+        php7-pdo \
         php7-pgsql \
         php7-phar \
         php7-session \
