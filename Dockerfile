@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.13
 
 LABEL description="PostfixAdmin is a web based interface used to manage mailboxes" \
     maintainer="Hardware <contact@meshup.net>"
@@ -12,17 +12,17 @@ RUN set -eux; \
         dovecot \
         tini \
         \
-        php7 \
-        php7-fpm \
-        php7-imap \
-        php7-mbstring \
-        php7-mysqli \
-        php7-pdo \
-        php7-pdo_mysql \
-        php7-pdo_pgsql \
-        php7-pgsql \
-        php7-phar \
-        php7-session \
+        php8 \
+        php8-fpm \
+        php8-imap \
+        php8-mbstring \
+        php8-mysqli \
+        php8-pdo \
+        php8-pdo_mysql \
+        php8-pdo_pgsql \
+        php8-pgsql \
+        php8-phar \
+        php8-session \
     ; \
     \
     PFA_TARBALL="postfixadmin-${VERSION}.tar.gz"; \
