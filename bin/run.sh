@@ -91,4 +91,4 @@ cat > /postfixadmin/config.local.php <<EOF
 EOF
 
 # RUN !
-exec su-exec $UID:$GID php7 -S 0.0.0.0:8888 -t /postfixadmin/public
+exec su-exec $UID:$GID php8 -S 0.0.0.0:8888 -t /postfixadmin/public
