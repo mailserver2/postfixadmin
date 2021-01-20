@@ -10,7 +10,7 @@ read -rp "> Postfixadmin setup hash : " HASH
 # MD5(salt) : SHA1( MD5(salt) : PASSWORD );
 #    32     1              40
 # Exemple : ffdeb741c58db80d060ddb170af4623a:54e0ac9a55d69c5e53d214c7ad7f1e3df40a3caa
-while [ ${#HASH} -ne 73 ]; do
+while [ ${#HASH} -ne 60 ]; do
   echo -e "${CRED}\n/!\ Invalid HASH !${CEND}" 1>&2
   read -rp "> Postfixadmin setup hash : " HASH
   echo ""
