@@ -7,9 +7,11 @@ CGREEN="${CSI}1;32m"
 
 read -rp "> Postfixadmin setup hash : " HASH
 
-# MD5(salt) : SHA1( MD5(salt) : PASSWORD );
-#    32     1              40
-# Exemple : ffdeb741c58db80d060ddb170af4623a:54e0ac9a55d69c5e53d214c7ad7f1e3df40a3caa
+# postfixadmin uses the function password_hash with PASSWORD_DEFAULT since version 3.3.0.
+# password_hash() creates a new password hash using a strong one-way hashing algorithm.
+# PASSWORD_DEFAULT - Use the bcrypt algorithm (default as of PHP 5.5.0). Note that this constant is designed to change over time as new and stronger algorithms are added to PHP.
+# PASSWORD_BCRYPT - Use the CRYPT_BLOWFISH algorithm to create the hash. This will produce a standard crypt() compatible hash using the "$2y$" identifier. The result will always be a 60 character string, or false on failure.
+# See also: https://www.php.net/manual/en/function.password-hash.php
 while [ ${#HASH} -ne 60 ]; do
   echo -e "${CRED}\n/!\ Invalid HASH !${CEND}" 1>&2
   read -rp "> Postfixadmin setup hash : " HASH
