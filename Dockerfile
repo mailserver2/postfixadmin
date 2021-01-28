@@ -3,8 +3,8 @@ FROM alpine:3.13
 LABEL description="PostfixAdmin is a web based interface used to manage mailboxes" \
     maintainer="Hardware <contact@meshup.net>"
 
-ARG VERSION=3.3.4
-ARG SHA256_HASH="8720ab6945d6526abffb18e8c5cb0f33a4fe884aa03749d55f0707e45f92b7eb"
+ARG VERSION=3.3.5
+ARG SHA256_HASH="675c6278b14db4efa35d264c4c28abc9b5f131f31f2d52f74c46a1d3dcaff97d"
 
 RUN set -eux; \
     apk add --no-cache \
