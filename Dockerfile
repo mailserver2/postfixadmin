@@ -1,9 +1,9 @@
-FROM alpine:3.14
+FROM alpine:3.15
 
 LABEL description="PostfixAdmin is a web based interface used to manage mailboxes"
 
-ARG VERSION=3.3.10
-ARG SHA256_HASH="b162cef0968225b33c251d5e7e872ca93ec790f275b874659f34b2ec69b9812c"
+ARG VERSION=3.3.11
+ARG SHA256_HASH="bcbee633e845f730bef7b01912da12574b6766f4f7560edc28891ff644596c22"
 
 RUN set -eux; \
     apk add --no-cache \
