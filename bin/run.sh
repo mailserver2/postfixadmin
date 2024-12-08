@@ -91,6 +91,6 @@ cat > /postfixadmin/config.local.php <<EOF
 EOF
 
 # Upgrade
-php /postfixadmin/public/upgrade.php
+php84 /postfixadmin/public/upgrade.php
 # RUN !
-exec su-exec $UID:$GID php -S 0.0.0.0:8888 -t /postfixadmin/public
+exec su-exec $UID:$GID php84 -S 0.0.0.0:8888 -t /postfixadmin/public
