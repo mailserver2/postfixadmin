@@ -10,7 +10,7 @@ PostfixAdmin is a web based interface used to manage mailboxes, virtual domains 
 
 - Lightweight & secure image (no root process)
 - Based on Alpine Linux
-- Latest Postfixadmin version (3.3.13)
+- Latest Postfixadmin version (4.0.5)
 - MariaDB/PostgreSQL driver
 - With PHP8
 
